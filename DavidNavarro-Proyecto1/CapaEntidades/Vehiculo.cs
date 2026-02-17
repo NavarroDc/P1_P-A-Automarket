@@ -16,5 +16,15 @@ namespace CapaEntidades
         public CategoriaVehiculo Categoria { get; set; }
         public char Estado { get; set; }
 
+        public Vehiculo(int idVehiculo, string marca, string modelo, int anio, decimal precio, CategoriaVehiculo categoria, char estado)
+        {
+            IdVehiculo = idVehiculo;
+            Marca = marca;
+            Modelo = modelo;
+            Anio = anio;
+            Precio = precio;
+            Categoria = categoria;
+            Estado = estado;
+        }
     }
 }
