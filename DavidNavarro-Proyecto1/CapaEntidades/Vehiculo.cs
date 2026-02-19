@@ -34,7 +34,5 @@ namespace CapaEntidades
             Categoria = categoria;
             Estado = estado;
         }
-
-        public CategoriaVehiculo buscarCatId()
     }
 }

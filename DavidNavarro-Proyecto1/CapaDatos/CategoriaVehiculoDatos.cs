@@ -20,6 +20,7 @@ namespace CapaDatos
         private CategoriaVehiculo[] categorias;
         private int contador;
 
+        //Constructor
         public CategoriaVehiculoDatos()
         {
             categorias = new CategoriaVehiculo[20];
@@ -28,6 +29,7 @@ namespace CapaDatos
 
         public bool agregarCategoria(CategoriaVehiculo nuevaCategoria)
         {
+            //Si el arreglo de Categorias está lleno, retornar falso
             if(contador >= categorias.Length)
             {
                 return false;
@@ -36,6 +38,26 @@ namespace CapaDatos
             categorias[contador] = nuevaCategoria;
             contador++;
             return true;
+        }
+
+        //Buscar la categoría de acuerdo al ID del objeto
+        public CategoriaVehiculo BuscarCatId(int id)
+        {
+            for(int i = 0; i < contador; i++)
+            {
+                if (categorias[i].IdCategoria == id)
+                {
+                    return categorias[i];   
+                }
+            }
+
+            return null;
+        }
+
+        //Devuelve el arreglo de categorías sin recorrerlo
+        public CategoriaVehiculo[] obtenerCategorias()
+        {
+            return categorias;
         }
     }
 }
