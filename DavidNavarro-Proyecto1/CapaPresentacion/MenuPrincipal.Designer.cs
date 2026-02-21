@@ -64,6 +64,7 @@
             btnRegistrarCategoria.TabIndex = 2;
             btnRegistrarCategoria.Text = "Registrar categoría";
             btnRegistrarCategoria.UseVisualStyleBackColor = true;
+            btnRegistrarCategoria.Click += btnRegistrarCategoria_Click;
             // 
             // btnConsultarCategoria
             // 
