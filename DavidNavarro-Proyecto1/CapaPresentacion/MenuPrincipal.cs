@@ -34,7 +34,16 @@ namespace CapaPresentacion
 
         private void btnRegistrarCategoria_Click(object sender, EventArgs e)
         {
-
+            formRegistrarCategoria formRegistrarCat = new formRegistrarCategoria();
+            formRegistrarCat.ShowDialog();
         }
+
+        private void btnConsultarCategoria_Click(object sender, EventArgs e)
+        {
+            formConsultarCategoria formConsultarCat = new formConsultarCategoria();
+            formConsultarCat.ShowDialog();
+        }
+
+        
     }
 }

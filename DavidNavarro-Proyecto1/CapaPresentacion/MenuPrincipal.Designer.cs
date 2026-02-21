@@ -74,6 +74,7 @@
             btnConsultarCategoria.TabIndex = 3;
             btnConsultarCategoria.Text = "Consultar categoría";
             btnConsultarCategoria.UseVisualStyleBackColor = true;
+            btnConsultarCategoria.Click += btnConsultarCategoria_Click;
             // 
             // MenuPrincipal
             // 
