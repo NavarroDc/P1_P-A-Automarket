@@ -49,6 +49,7 @@
             Controls.Add(btnAtras);
             Name = "formConsultarCategoria";
             Text = "formConsultarCategoria";
+            Load += formConsultarCategoria_Load;
             ResumeLayout(false);
         }
 

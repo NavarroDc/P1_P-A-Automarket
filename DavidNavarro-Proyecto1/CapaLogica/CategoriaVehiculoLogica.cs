@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 /* UNED I Cuatrimestre
  * Programación avanzada
@@ -25,25 +26,34 @@ namespace CapaLogica
             datosCategoria = new CategoriaVehiculoDatos();
         }
 
-        public bool agregarCategoria(int id, string nombre, string descripcion)
+
+        public bool idRepetido(int id)
         {
             //Validar que el id sea único 
             if (datosCategoria.BuscarCatId(id) != null)
             {
-                return false;
+                return true;
             }
 
+            return false;
+        }
+        public bool espaciosVacios(string nombre, string descripcion)
+        {
             //Validar campos vacíos en categoría
             if (string.IsNullOrEmpty(nombre))
             {
-                return false;
+                return true;
             }
 
             if (string.IsNullOrEmpty(descripcion))
             {
-                return false;
+                return true;
             }
 
+            return false;
+        }
+        public bool agregarCategoria(int id, string nombre, string descripcion)
+        {
             //Crea el objeto
             CategoriaVehiculo nuevaCategoria = new CategoriaVehiculo(id, nombre, descripcion);
 

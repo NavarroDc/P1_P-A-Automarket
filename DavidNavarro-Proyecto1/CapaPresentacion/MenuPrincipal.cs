@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace CapaPresentacion
 {
     public partial class MenuPrincipal : Form
     {
+        private CategoriaVehiculoLogica logicaCategoria;
         public MenuPrincipal()
         {
             InitializeComponent();
+            logicaCategoria = new CategoriaVehiculoLogica();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace CapaPresentacion
 
         private void btnRegistrarCategoria_Click(object sender, EventArgs e)
         {
-            formRegistrarCategoria formRegistrarCat = new formRegistrarCategoria();
+            formRegistrarCategoria formRegistrarCat = new formRegistrarCategoria(logicaCategoria);
             formRegistrarCat.ShowDialog();
         }
 

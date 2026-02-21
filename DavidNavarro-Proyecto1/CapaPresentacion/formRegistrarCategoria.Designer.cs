@@ -63,6 +63,7 @@
             txtIdCategoria.Name = "txtIdCategoria";
             txtIdCategoria.Size = new Size(136, 23);
             txtIdCategoria.TabIndex = 2;
+            txtIdCategoria.TextChanged += txtIdCategoria_TextChanged;
             // 
             // label2
             // 
@@ -98,12 +99,13 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(28, 242);
+            btnGuardar.Location = new Point(23, 244);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
             btnGuardar.TabIndex = 7;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // formRegistrarCategoria
             // 

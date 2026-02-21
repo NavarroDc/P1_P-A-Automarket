@@ -26,15 +26,16 @@ namespace CapaDatos
             categorias = new CategoriaVehiculo[20];
             contador = 0;
         }
+        
+        //Método para verificar si el arreglo de categorías está lleno
+        public bool estaLleno()
+        {
+            return contador >= categorias.Length;
+        }
 
         public bool agregarCategoria(CategoriaVehiculo nuevaCategoria)
         {
-            //Si el arreglo de Categorias está lleno, retornar falso
-            if(contador >= categorias.Length)
-            {
-                return false;
-            }
-
+            
             categorias[contador] = nuevaCategoria;
             contador++;
             return true;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,21 @@ namespace CapaPresentacion
 {
     public partial class formConsultarCategoria : Form
     {
-        public formConsultarCategoria()
+        private CategoriaVehiculoLogica logicaCategoria;
+        public formConsultarCategoria(CategoriaVehiculoLogica logica)
         {
             InitializeComponent();
+            logicaCategoria = logica;   
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void formConsultarCategoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
