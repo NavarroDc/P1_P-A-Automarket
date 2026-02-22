@@ -53,7 +53,7 @@ namespace CapaPresentacion
         //Botones registrar y consultar vehículos
         private void btnRegistrarVehiculos_Click(object sender, EventArgs e)
         {
-            FormRegistrarVehiculo formRegistrarVehiculo = new FormRegistrarVehiculo(logicaVehiculo);
+            FormRegistrarVehiculo formRegistrarVehiculo = new FormRegistrarVehiculo(logicaVehiculo, logicaCategoria);
             formRegistrarVehiculo.ShowDialog();
         }
 

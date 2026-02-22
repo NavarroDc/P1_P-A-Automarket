@@ -72,7 +72,7 @@ namespace CapaLogica
         }
 
         //Método para verificar que el estado sea válido
-        public bool estadoInvalido(char estado)
+        public bool estadoValido(char estado)
         {
             if(estado.Equals("N"))
             {
@@ -84,10 +84,51 @@ namespace CapaLogica
             return false;
         }
 
+        //Método que agrega un vehículo
+        public string agregarVehiculo(int id, string marca, string modelo, 
+                                      int anio, decimal precio, CategoriaVehiculo categoria, char estado)
+        {
+            if (idRepetido(id))
+            {
+                return "El ID ya existe...";
+            }
 
+            if (!textoValido(marca))
+            {
+                return "No puede haber espacios vacíos...";
+            }
 
+            if (!textoValido(modelo))
+            {
+                return "No puede haber espacios vacíos...";
+            }
 
+            if (!anioValido(anio))
+            {
+                return "El año ingresado no es válido...";
+            }
 
+            if (!precioValido(precio))
+            {
+                return "El precio debe ser mayor a cero...";
+            }
 
+            if(categoria != null)
+            {
+                return "Debe seleccionar una categoría...";
+            }
+
+            if (!estadoValido(estado))
+            {
+                return "Debe escribir 'N' o 'U'...";
+            }
+
+            return null;
+        }
+
+        public Vehiculo[] ObtenerVehiculos()
+        {
+            return datosVehiculo.obtenerVehiculos();
+        }
     }
 }
