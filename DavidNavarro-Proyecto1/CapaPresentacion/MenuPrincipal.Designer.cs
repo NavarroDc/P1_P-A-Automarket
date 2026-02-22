@@ -86,6 +86,7 @@
             btnRegistrarVehiculos.TabIndex = 4;
             btnRegistrarVehiculos.Text = "Registrar vehículos";
             btnRegistrarVehiculos.UseVisualStyleBackColor = true;
+            btnRegistrarVehiculos.Click += btnRegistrarVehiculos_Click;
             // 
             // btnConsultarVehiculos
             // 
@@ -95,6 +96,7 @@
             btnConsultarVehiculos.TabIndex = 5;
             btnConsultarVehiculos.Text = "Consultar vehículos";
             btnConsultarVehiculos.UseVisualStyleBackColor = true;
+            btnConsultarVehiculos.Click += btnConsultarVehiculos_Click;
             // 
             // MenuPrincipal
             // 

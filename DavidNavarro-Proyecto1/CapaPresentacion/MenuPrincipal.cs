@@ -14,10 +14,12 @@ namespace CapaPresentacion
     public partial class MenuPrincipal : Form
     {
         private CategoriaVehiculoLogica logicaCategoria;
+        private VehiculoLogica logicaVehiculo;
         public MenuPrincipal()
         {
             InitializeComponent();
             logicaCategoria = new CategoriaVehiculoLogica();
+            logicaVehiculo = new VehiculoLogica();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -35,6 +37,7 @@ namespace CapaPresentacion
 
         }
 
+        //Botones registrar y consultar categoría----------------
         private void btnRegistrarCategoria_Click(object sender, EventArgs e)
         {
             formRegistrarCategoria formRegistrarCat = new formRegistrarCategoria(logicaCategoria);
@@ -46,7 +49,18 @@ namespace CapaPresentacion
             formConsultarCategoria formConsultarCat = new formConsultarCategoria(logicaCategoria);
             formConsultarCat.ShowDialog();
         }
+        //-----------------------------------------
+        //Botones registrar y consultar vehículos
+        private void btnRegistrarVehiculos_Click(object sender, EventArgs e)
+        {
+            FormRegistrarVehiculo formRegistrarVehiculo = new FormRegistrarVehiculo(logicaVehiculo);
+            formRegistrarVehiculo.ShowDialog();
+        }
 
-        
+        private void btnConsultarVehiculos_Click(object sender, EventArgs e)
+        {
+            FormConsultarVehiculo formConsultarVehiculo = new FormConsultarVehiculo(logicaVehiculo);
+            formConsultarVehiculo.ShowDialog();
+        }
     }
 }

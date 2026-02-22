@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace CapaPresentacion
 {
     public partial class FormRegistrarVehiculo : Form
     {
-        public FormRegistrarVehiculo()
+        private VehiculoLogica logicaVehiculo;
+        public FormRegistrarVehiculo(VehiculoLogica logica)
         {
             InitializeComponent();
+            logicaVehiculo = logica;
+        }
+
+        private void FormRegistrarVehiculo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
