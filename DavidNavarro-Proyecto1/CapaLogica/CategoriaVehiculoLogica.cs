@@ -58,14 +58,14 @@ namespace CapaLogica
         }
         public string agregarCategoria(int id, string nombre, string descripcion)
         {
+            if (espaciosVacios(nombre, descripcion))
+            {
+                return "No pueden haber campos vacíos...";
+            }
+
             if (idRepetido(id))
             {
                 return "El ID ya existe...";
-            }
-
-            if(espaciosVacios(nombre, descripcion))
-            {
-                return "No pueden haber campos vacíos...";
             }
 
             CategoriaVehiculo nuevaCategoria = new CategoriaVehiculo(id, nombre, descripcion);

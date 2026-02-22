@@ -36,7 +36,30 @@ namespace CapaPresentacion
         {
             try
             {
+                int idCategoria;
 
+                if(int.TryParse(txtIdCategoria.Text, out idCategoria) == false)
+                {
+                    MessageBox.Show("El ID debe ser un número entero...");
+                    return;
+                }
+                else
+                {
+                    string nombreCategoria = txtNombreCategoria.Text;
+                    string descripcionCategoria = txtDescripcionCat.Text;
+
+                    string mensaje = logicaCategoria.agregarCategoria(idCategoria, nombreCategoria, descripcionCategoria);
+
+                    if(mensaje == null)
+                    {
+                        MessageBox.Show("¡Categoría registrada correctamente!");
+                        limpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
+                }   
             }
 
             catch (Exception ex)
