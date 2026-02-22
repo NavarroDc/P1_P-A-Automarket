@@ -1,4 +1,5 @@
 ﻿using CapaLogica;
+using CapaEntidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CapaPresentacion
 {
     public partial class formConsultarCategoria : Form
@@ -17,7 +19,7 @@ namespace CapaPresentacion
         public formConsultarCategoria(CategoriaVehiculoLogica logica)
         {
             InitializeComponent();
-            logicaCategoria = logica;   
+            logicaCategoria = logica;
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -25,9 +27,27 @@ namespace CapaPresentacion
             this.Close();
         }
 
+        private void cargarCategorias()
+        {
+            dgvCategoriasVehiculos.Rows.Clear();
+
+            CategoriaVehiculo[] arregloCategorias = logicaCategoria.ObtenerCategorias();
+            int cantidadCategorias = logicaCategoria.ObtenerCantidad();
+
+            for (int i = 0; i < cantidadCategorias; i++)
+            {
+                dgvCategoriasVehiculos.Rows.Add(
+                    arregloCategorias[i].IdCategoria,
+                    arregloCategorias[i].NombreCategoria,
+                    arregloCategorias[i].Descripcion
+                    );
+            }
+        }
         private void formConsultarCategoria_Load(object sender, EventArgs e)
         {
-
+            cargarCategorias();
         }
+
+       
     }
 }

@@ -57,5 +57,17 @@ namespace CapaDatos
 
             return null;
         }
+
+        //Devuelve el arreglo de categorías
+        public CategoriaVehiculo[] obtenerCategorias()
+        {
+            return categorias;
+        }
+
+        //Devuelve los espacios del arreglo que están llenos
+        public int obtenerCantidad()
+        {
+            return contador;
+        }
     }
 }

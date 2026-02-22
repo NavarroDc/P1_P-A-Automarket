@@ -62,7 +62,7 @@
             btnRegistrarCategoria.Name = "btnRegistrarCategoria";
             btnRegistrarCategoria.Size = new Size(147, 23);
             btnRegistrarCategoria.TabIndex = 2;
-            btnRegistrarCategoria.Text = "Registrar categoría";
+            btnRegistrarCategoria.Text = "Registrar categorías";
             btnRegistrarCategoria.UseVisualStyleBackColor = true;
             btnRegistrarCategoria.Click += btnRegistrarCategoria_Click;
             // 
@@ -72,7 +72,7 @@
             btnConsultarCategoria.Name = "btnConsultarCategoria";
             btnConsultarCategoria.Size = new Size(134, 23);
             btnConsultarCategoria.TabIndex = 3;
-            btnConsultarCategoria.Text = "Consultar categoría";
+            btnConsultarCategoria.Text = "Consultar categorías";
             btnConsultarCategoria.UseVisualStyleBackColor = true;
             btnConsultarCategoria.Click += btnConsultarCategoria_Click;
             // 

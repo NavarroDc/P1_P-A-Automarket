@@ -54,6 +54,7 @@ namespace CapaPresentacion
                     {
                         MessageBox.Show("¡Categoría registrada correctamente!");
                         limpiarCampos();
+                        
                     }
                     else
                     {

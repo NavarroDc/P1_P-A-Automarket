@@ -122,6 +122,7 @@
             Controls.Add(label1);
             Controls.Add(btnAtras);
             Name = "formRegistrarCategoria";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "formRegistrarCategoria";
             Load += formRegistrarCategoria_Load;
             ResumeLayout(false);

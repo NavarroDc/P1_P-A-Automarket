@@ -78,6 +78,16 @@ namespace CapaLogica
             return null;
         }
 
+        public CategoriaVehiculo[] ObtenerCategorias()
+        {
+            return datosCategoria.obtenerCategorias();
+        }
+
+        public int ObtenerCantidad()
+        {
+            return datosCategoria.obtenerCantidad();
+        }
+
         
     }
 }
