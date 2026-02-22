@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnAtras = new Button();
             SuspendLayout();
+            // 
+            // btnAtras
+            // 
+            btnAtras.Location = new Point(713, 415);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(75, 23);
+            btnAtras.TabIndex = 0;
+            btnAtras.Text = "Atrás";
+            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.Click += btnAtras_Click;
             // 
             // FormConsultarVehiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAtras);
             Name = "FormConsultarVehiculo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormConsultarVehiculo";
             Load += FormConsultarVehiculo_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnAtras;
     }
 }

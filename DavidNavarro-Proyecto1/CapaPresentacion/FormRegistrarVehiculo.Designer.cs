@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnAtras = new Button();
             SuspendLayout();
+            // 
+            // btnAtras
+            // 
+            btnAtras.Location = new Point(713, 415);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(75, 23);
+            btnAtras.TabIndex = 0;
+            btnAtras.Text = "Atrás";
+            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.Click += btnAtras_Click;
             // 
             // FormRegistrarVehiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAtras);
             Name = "FormRegistrarVehiculo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormRegistrarVehiculo";
             Load += FormRegistrarVehiculo_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnAtras;
     }
 }

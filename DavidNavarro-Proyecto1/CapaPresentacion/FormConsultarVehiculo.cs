@@ -21,9 +21,15 @@ namespace CapaPresentacion
 
         }
 
+
         private void FormConsultarVehiculo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
