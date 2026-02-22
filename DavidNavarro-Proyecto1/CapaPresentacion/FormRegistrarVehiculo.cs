@@ -29,5 +29,16 @@ namespace CapaPresentacion
         {
             this.Close();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            int id;
+            
+            if(!int.TryParse(txtIdVehiculo.Text, out id))
+            {
+                MessageBox.Show("El ID debe ser un número entero...");
+                return;
+            }
+        }
     }
 }
