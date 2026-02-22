@@ -35,7 +35,10 @@ namespace CapaDatos
 
         public bool agregarCategoria(CategoriaVehiculo nuevaCategoria)
         {
-            
+            if(contador >= categorias.Length)
+            {
+                return false;
+            }
             categorias[contador] = nuevaCategoria;
             contador++;
             return true;
@@ -53,12 +56,6 @@ namespace CapaDatos
             }
 
             return null;
-        }
-
-        //Devuelve el arreglo de categorías sin recorrerlo
-        public CategoriaVehiculo[] obtenerCategorias()
-        {
-            return categorias;
         }
     }
 }

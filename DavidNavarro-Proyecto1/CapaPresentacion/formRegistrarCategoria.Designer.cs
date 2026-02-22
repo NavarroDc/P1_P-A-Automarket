@@ -80,6 +80,7 @@
             txtNombreCategoria.Name = "txtNombreCategoria";
             txtNombreCategoria.Size = new Size(136, 23);
             txtNombreCategoria.TabIndex = 4;
+            txtNombreCategoria.TextChanged += txtNombreCategoria_TextChanged;
             // 
             // label3
             // 
@@ -122,6 +123,7 @@
             Controls.Add(btnAtras);
             Name = "formRegistrarCategoria";
             Text = "formRegistrarCategoria";
+            Load += formRegistrarCategoria_Load;
             ResumeLayout(false);
             PerformLayout();
         }

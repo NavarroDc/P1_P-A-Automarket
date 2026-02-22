@@ -43,7 +43,7 @@ namespace CapaPresentacion
 
         private void btnConsultarCategoria_Click(object sender, EventArgs e)
         {
-            formConsultarCategoria formConsultarCat = new formConsultarCategoria();
+            formConsultarCategoria formConsultarCat = new formConsultarCategoria(logicaCategoria);
             formConsultarCat.ShowDialog();
         }
 

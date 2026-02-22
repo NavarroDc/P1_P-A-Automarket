@@ -29,14 +29,18 @@ namespace CapaLogica
 
         public bool idRepetido(int id)
         {
-            //Validar que el id sea único 
-            if (datosCategoria.BuscarCatId(id) != null)
+            //Validar que el ID no se repita
+            if(datosCategoria.BuscarCatId(id) != null)
             {
                 return true;
             }
-
-            return false;
+            else
+            {
+                return false;
+            }
         }
+        
+            
         public bool espaciosVacios(string nombre, string descripcion)
         {
             //Validar campos vacíos en categoría
@@ -52,13 +56,26 @@ namespace CapaLogica
 
             return false;
         }
-        public bool agregarCategoria(int id, string nombre, string descripcion)
+        public string agregarCategoria(int id, string nombre, string descripcion)
         {
-            //Crea el objeto
+            if (idRepetido(id))
+            {
+                return "El ID ya existe...";
+            }
+
+            if(espaciosVacios(nombre, descripcion))
+            {
+                return "No pueden haber campos vacíos...";
+            }
+
             CategoriaVehiculo nuevaCategoria = new CategoriaVehiculo(id, nombre, descripcion);
 
-            //Guarda el objeto en CapaDatos
-            return datosCategoria.agregarCategoria(nuevaCategoria);
+            if (!datosCategoria.agregarCategoria(nuevaCategoria))
+            {
+                return "Solo se pueden añadir 20 categorías...";
+            }
+
+            return null;
         }
 
         

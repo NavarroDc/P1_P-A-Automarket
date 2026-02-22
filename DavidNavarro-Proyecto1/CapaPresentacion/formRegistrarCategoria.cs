@@ -20,7 +20,12 @@ namespace CapaPresentacion
             logicaCategoria = logica;
         }
 
-
+        private void limpiarCampos()
+        {
+            txtIdCategoria.Clear();
+            txtNombreCategoria.Clear();
+            txtDescripcionCat.Clear();
+        }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -31,31 +36,7 @@ namespace CapaPresentacion
         {
             try
             {
-                int idCategoria;
 
-                //Validar que el id de la categoría sea un número entero
-                if (!int.TryParse(txtIdCategoria.Text, out idCategoria))
-                {
-                    MessageBox.Show("El ID de la categoría debe ser un número entero...");
-                    return;
-                }
-
-                string nombreCategoria = txtNombreCategoria.Text;
-                string descripcionCategoria = txtDescripcionCat.Text;
-
-                bool resultado = logicaCategoria.agregarCategoria(idCategoria, nombreCategoria, descripcionCategoria);
-
-                if (resultado)
-                {
-                    MessageBox.Show("¡Categoría registrada!");
-                    txtIdCategoria.Clear();
-                    txtNombreCategoria.Clear();
-                    txtDescripcionCat.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("No pueden haber campos vacíos...");
-                }
             }
 
             catch (Exception ex)
@@ -65,6 +46,16 @@ namespace CapaPresentacion
         }
 
         private void txtIdCategoria_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formRegistrarCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreCategoria_TextChanged(object sender, EventArgs e)
         {
 
         }
