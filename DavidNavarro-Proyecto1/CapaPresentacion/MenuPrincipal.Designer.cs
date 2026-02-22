@@ -32,6 +32,8 @@
             label2 = new Label();
             btnRegistrarCategoria = new Button();
             btnConsultarCategoria = new Button();
+            btnRegistrarVehiculos = new Button();
+            btnConsultarVehiculos = new Button();
             SuspendLayout();
             // 
             // label1
@@ -76,11 +78,31 @@
             btnConsultarCategoria.UseVisualStyleBackColor = true;
             btnConsultarCategoria.Click += btnConsultarCategoria_Click;
             // 
+            // btnRegistrarVehiculos
+            // 
+            btnRegistrarVehiculos.Location = new Point(101, 118);
+            btnRegistrarVehiculos.Name = "btnRegistrarVehiculos";
+            btnRegistrarVehiculos.Size = new Size(147, 23);
+            btnRegistrarVehiculos.TabIndex = 4;
+            btnRegistrarVehiculos.Text = "Registrar vehículos";
+            btnRegistrarVehiculos.UseVisualStyleBackColor = true;
+            // 
+            // btnConsultarVehiculos
+            // 
+            btnConsultarVehiculos.Location = new Point(538, 119);
+            btnConsultarVehiculos.Name = "btnConsultarVehiculos";
+            btnConsultarVehiculos.Size = new Size(134, 23);
+            btnConsultarVehiculos.TabIndex = 5;
+            btnConsultarVehiculos.Text = "Consultar vehículos";
+            btnConsultarVehiculos.UseVisualStyleBackColor = true;
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnConsultarVehiculos);
+            Controls.Add(btnRegistrarVehiculos);
             Controls.Add(btnConsultarCategoria);
             Controls.Add(btnRegistrarCategoria);
             Controls.Add(label2);
@@ -99,5 +121,7 @@
         private Label label2;
         private Button btnRegistrarCategoria;
         private Button btnConsultarCategoria;
+        private Button btnRegistrarVehiculos;
+        private Button btnConsultarVehiculos;
     }
 }
