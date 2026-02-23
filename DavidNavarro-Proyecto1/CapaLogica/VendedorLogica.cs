@@ -54,7 +54,7 @@ namespace CapaLogica
                 return "La fecha de nacimiento no es válida...";
             }
 
-            if(fechaIngreso >= fechaNacimiento)
+            if(fechaIngreso <= fechaNacimiento)
             {
                 return "La fecha de ingreso no puede ser menor a la fecha de nacimiento...";
             }
