@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace CapaPresentacion
 {
     public partial class FormConsultarVendedor : Form
     {
-        public FormConsultarVendedor()
+        private VendedorLogica logicaVendedor;
+        public FormConsultarVendedor(VendedorLogica logica)
         {
             InitializeComponent();
+            logicaVendedor = logica;
+        }
+
+        private void FormConsultarVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

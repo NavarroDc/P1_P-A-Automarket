@@ -81,7 +81,14 @@ namespace CapaPresentacion
 
         private void btnRegistrarVendedores_Click(object sender, EventArgs e)
         {
-            
+            FormRegistrarVendedor formRegistrarVendedor = new FormRegistrarVendedor(logicaVendedor);
+            formRegistrarVendedor.ShowDialog();
+        }
+
+        private void btnConsultarVendedores_Click(object sender, EventArgs e)
+        {
+            FormConsultarVendedor formConsultarVendedor = new FormConsultarVendedor(logicaVendedor);
+            formConsultarVendedor.ShowDialog();
         }
     }
 }

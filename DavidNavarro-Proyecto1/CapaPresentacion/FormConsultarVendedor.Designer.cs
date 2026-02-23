@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormConsultarVendedor";
+            btnAtras = new Button();
+            SuspendLayout();
+            // 
+            // btnAtras
+            // 
+            btnAtras.Location = new Point(713, 415);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(75, 23);
+            btnAtras.TabIndex = 0;
+            btnAtras.Text = "Atrás";
+            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.Click += btnAtras_Click;
+            // 
+            // FormConsultarVendedor
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnAtras);
+            Name = "FormConsultarVendedor";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormConsultarVendedor";
+            Load += FormConsultarVendedor_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnAtras;
     }
 }

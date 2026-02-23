@@ -118,6 +118,7 @@
             btnConsultarVendedores.TabIndex = 7;
             btnConsultarVendedores.Text = "Consultar vendedores";
             btnConsultarVendedores.UseVisualStyleBackColor = true;
+            btnConsultarVendedores.Click += btnConsultarVendedores_Click;
             // 
             // MenuPrincipal
             // 
