@@ -9,6 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* UNED I Cuatrimestre
+ * Programación avanzada
+ * Profesor: Johan Figueroa Guevara
+ * Proyecto 1: Automarket
+ * Estudiante: David Navarro Camacho
+ * Fecha: 22/2/2026
+ */
+
 namespace CapaPresentacion
 {
     public partial class MenuPrincipal : Form
