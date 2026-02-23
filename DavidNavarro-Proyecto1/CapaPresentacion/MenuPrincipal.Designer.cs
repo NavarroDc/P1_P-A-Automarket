@@ -34,6 +34,8 @@
             btnConsultarCategoria = new Button();
             btnRegistrarVehiculos = new Button();
             btnConsultarVehiculos = new Button();
+            btnRegistrarVendedores = new Button();
+            btnConsultarVendedores = new Button();
             SuspendLayout();
             // 
             // label1
@@ -98,11 +100,32 @@
             btnConsultarVehiculos.UseVisualStyleBackColor = true;
             btnConsultarVehiculos.Click += btnConsultarVehiculos_Click;
             // 
+            // btnRegistrarVendedores
+            // 
+            btnRegistrarVendedores.Location = new Point(101, 166);
+            btnRegistrarVendedores.Name = "btnRegistrarVendedores";
+            btnRegistrarVendedores.Size = new Size(147, 23);
+            btnRegistrarVendedores.TabIndex = 6;
+            btnRegistrarVendedores.Text = "Registrar vendedores";
+            btnRegistrarVendedores.UseVisualStyleBackColor = true;
+            btnRegistrarVendedores.Click += btnRegistrarVendedores_Click;
+            // 
+            // btnConsultarVendedores
+            // 
+            btnConsultarVendedores.Location = new Point(538, 163);
+            btnConsultarVendedores.Name = "btnConsultarVendedores";
+            btnConsultarVendedores.Size = new Size(134, 23);
+            btnConsultarVendedores.TabIndex = 7;
+            btnConsultarVendedores.Text = "Consultar vendedores";
+            btnConsultarVendedores.UseVisualStyleBackColor = true;
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnConsultarVendedores);
+            Controls.Add(btnRegistrarVendedores);
             Controls.Add(btnConsultarVehiculos);
             Controls.Add(btnRegistrarVehiculos);
             Controls.Add(btnConsultarCategoria);
@@ -125,5 +148,7 @@
         private Button btnConsultarCategoria;
         private Button btnRegistrarVehiculos;
         private Button btnConsultarVehiculos;
+        private Button btnRegistrarVendedores;
+        private Button btnConsultarVendedores;
     }
 }

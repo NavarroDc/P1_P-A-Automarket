@@ -23,11 +23,13 @@ namespace CapaPresentacion
     {
         private CategoriaVehiculoLogica logicaCategoria;
         private VehiculoLogica logicaVehiculo;
+        private VendedorLogica logicaVendedor;
         public MenuPrincipal()
         {
             InitializeComponent();
             logicaCategoria = new CategoriaVehiculoLogica();
             logicaVehiculo = new VehiculoLogica();
+            logicaVendedor = new VendedorLogica();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -75,6 +77,11 @@ namespace CapaPresentacion
         {
             FormConsultarVehiculo formConsultarVehiculo = new FormConsultarVehiculo(logicaVehiculo);
             formConsultarVehiculo.ShowDialog();
+        }
+
+        private void btnRegistrarVendedores_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
