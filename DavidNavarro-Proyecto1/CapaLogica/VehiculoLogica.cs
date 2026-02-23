@@ -74,14 +74,11 @@ namespace CapaLogica
         //Método para verificar que el estado sea válido
         public bool estadoValido(char estado)
         {
-            if(estado.Equals("N"))
+           if(estado == 'N' || estado == 'U')
             {
-                if(estado.Equals("U"))
-                {
-                    return true;
-                }
+                return true;
             }
-            return false;
+           return false;
         }
 
         //Método que agrega un vehículo
@@ -113,7 +110,7 @@ namespace CapaLogica
                 return "El precio debe ser mayor a cero...";
             }
 
-            if(categoria != null)
+            if(categoria == null)
             {
                 return "Debe seleccionar una categoría...";
             }
@@ -123,6 +120,14 @@ namespace CapaLogica
                 return "Debe escribir 'N' o 'U'...";
             }
 
+            if (datosVehiculo.estaLleno())
+            {
+                return "No se pueden ingresar más vehículos...";
+            }
+
+            Vehiculo nuevoVehiculo = new Vehiculo(id, marca, modelo, anio, precio, categoria, estado);
+
+            datosVehiculo.agregarVehiculo(nuevoVehiculo);
             return null;
         }
 

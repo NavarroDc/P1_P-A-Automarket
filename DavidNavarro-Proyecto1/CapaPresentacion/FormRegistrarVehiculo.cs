@@ -36,7 +36,11 @@ namespace CapaPresentacion
             txtAnioVehiculo.Clear();
             txtPrecioVehiculo.Clear();
             txtEstadoVehiculo.Clear();
-            cmbCategoriaVehiculo.SelectedIndex = -1;
+            
+            if(cmbCategoriaVehiculo.Items.Count > 0 )
+            {
+                cmbCategoriaVehiculo.SelectedIndex = 0;
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -107,13 +111,9 @@ namespace CapaPresentacion
                     }
                 }
 
-                if(cmbCategoriaVehiculo.Items.Count > 0)
+                if (cmbCategoriaVehiculo.Items.Count > 0)
                 {
-                   cmbCategoriaVehiculo.SelectedIndex = 0;
-                }
-                else
-                {
-                    btnGuardar.Enabled = true;
+                    cmbCategoriaVehiculo.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
