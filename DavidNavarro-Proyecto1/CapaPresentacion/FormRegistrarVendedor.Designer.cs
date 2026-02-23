@@ -41,6 +41,7 @@
             txtIdentificacionVendedor = new TextBox();
             txtNombreVendedor = new TextBox();
             txtTelefonoVendedor = new TextBox();
+            btnGuardar = new Button();
             SuspendLayout();
             // 
             // btnAtras
@@ -91,6 +92,7 @@
             // 
             // dtpFechaNacimiento
             // 
+            dtpFechaNacimiento.Format = DateTimePickerFormat.Short;
             dtpFechaNacimiento.Location = new Point(269, 164);
             dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             dtpFechaNacimiento.Size = new Size(200, 23);
@@ -107,6 +109,7 @@
             // 
             // dtpFechaIngreso
             // 
+            dtpFechaIngreso.Format = DateTimePickerFormat.Short;
             dtpFechaIngreso.Location = new Point(248, 213);
             dtpFechaIngreso.Name = "dtpFechaIngreso";
             dtpFechaIngreso.Size = new Size(200, 23);
@@ -150,11 +153,21 @@
             txtTelefonoVendedor.Size = new Size(158, 23);
             txtTelefonoVendedor.TabIndex = 12;
             // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(23, 381);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 13;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // FormRegistrarVendedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnGuardar);
             Controls.Add(txtTelefonoVendedor);
             Controls.Add(txtNombreVendedor);
             Controls.Add(txtIdentificacionVendedor);
@@ -191,5 +204,6 @@
         private TextBox txtIdentificacionVendedor;
         private TextBox txtNombreVendedor;
         private TextBox txtTelefonoVendedor;
+        private Button btnGuardar;
     }
 }
