@@ -71,6 +71,16 @@ namespace CapaPresentacion
                     dtpFechaIngreso.Value,
                     txtTelefonoVendedor.Text
                 );
+
+            if(mensaje != null)
+            {
+                MessageBox.Show(mensaje);
+                return;
+            }
+
+            MessageBox.Show("¡Vendedor registrado correctamente!");
+            limpiarCampos();
+            
         }
     }
 }
