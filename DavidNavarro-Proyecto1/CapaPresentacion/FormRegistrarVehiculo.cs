@@ -99,21 +99,17 @@ namespace CapaPresentacion
                 cmbCategoriaVehiculo.Items.Clear();
                 CategoriaVehiculo[] categorias = logicaCategoria.ObtenerCategorias();
 
-                bool hayCategorias = false;
-
                 for(int i = 0; i < categorias.Length; i++)
                 {
                     if (categorias[i] != null)
                     {
                         cmbCategoriaVehiculo.Items.Add(categorias[i]);
-                        hayCategorias = true;
                     }
                 }
 
-                if(hayCategorias == false)
+                if(cmbCategoriaVehiculo.Items.Count > 0)
                 {
-                    MessageBox.Show("Debe registrar al menos una categoría para registrar el vehículo...");
-                    btnGuardar.Enabled = false;
+                   cmbCategoriaVehiculo.SelectedIndex = 0;
                 }
                 else
                 {
@@ -122,7 +118,7 @@ namespace CapaPresentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro, no se cargaron las categorías... " + ex.Message);
+                MessageBox.Show("Error, no se cargaron las categorías... " + ex.Message);
 
             }
         }

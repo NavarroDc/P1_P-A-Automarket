@@ -26,5 +26,10 @@ namespace CapaEntidades
             NombreCategoria = nombreCategoria;
             Descripcion = descripcion;
         }
+
+        public override string ToString()
+        {
+            return NombreCategoria;  
+        }
     }
 }

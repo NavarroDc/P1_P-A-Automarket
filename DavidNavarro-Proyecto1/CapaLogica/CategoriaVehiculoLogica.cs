@@ -88,6 +88,19 @@ namespace CapaLogica
             return datosCategoria.obtenerCantidad();
         }
 
+        public bool hayCategorias()
+        {
+            CategoriaVehiculo[] categorias = datosCategoria.obtenerCategorias();
+
+            for(int i = 0; i < categorias.Length; i++)
+            {
+                if (categorias[i] != null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         
     }
 }

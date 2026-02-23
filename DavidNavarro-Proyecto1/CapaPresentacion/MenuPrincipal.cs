@@ -53,6 +53,12 @@ namespace CapaPresentacion
         //Botones registrar y consultar vehículos
         private void btnRegistrarVehiculos_Click(object sender, EventArgs e)
         {
+            if (!logicaCategoria.hayCategorias())
+            {
+                MessageBox.Show("Debe registrar al menos una categoría antes de registrar un vehículo...");
+                return;
+            }
+
             FormRegistrarVehiculo formRegistrarVehiculo = new FormRegistrarVehiculo(logicaVehiculo, logicaCategoria);
             formRegistrarVehiculo.ShowDialog();
         }
