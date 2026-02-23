@@ -28,6 +28,16 @@ namespace CapaPresentacion
             logicaVendedor = logica;
         }
 
+        private void limpiarCampos()
+        {
+            txtIdVendedor.Clear();
+            txtIdentificacionVendedor.Clear();
+            txtNombreVendedor.Clear();
+            txtTelefonoVendedor.Clear();
+            dtpFechaNacimiento.Value = DateTime.Today;
+            dtpFechaIngreso.Value = DateTime.Today;
+        }
+
         private void FormRegistrarVendedor_Load(object sender, EventArgs e)
         {
 
@@ -41,6 +51,26 @@ namespace CapaPresentacion
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            if(!int.TryParse(txtIdVendedor.Text, out id))
+            {
+                MessageBox.Show("El ID debe ser numérico...");
+                return;
+            }
+
+            string mensaje = logicaVendedor.agregarVendedor(
+                    id,
+                    txtIdentificacionVendedor.Text,
+                    txtNombreVendedor.Text,
+                    dtpFechaNacimiento.Value,
+                    dtpFechaIngreso.Value,
+                    txtTelefonoVendedor.Text
+                );
         }
     }
 }

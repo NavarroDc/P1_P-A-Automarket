@@ -161,6 +161,7 @@
             btnGuardar.TabIndex = 13;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // FormRegistrarVendedor
             // 
